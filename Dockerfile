@@ -1,7 +1,6 @@
 FROM node:10
 
-RUN apt-get update && apt-get install -y --no-install-recommends postgresql-client musl build-essential libproj-dev
-COPY vendor/tippecanoe/* /usr/local/bin/
+RUN apt-get update && apt-get install -y --no-install-recommends build-essential libproj-dev
 
 ENV SRC_DIR /opt/src/
 RUN mkdir -p $SRC_DIR
