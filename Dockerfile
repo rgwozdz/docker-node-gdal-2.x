@@ -1,6 +1,9 @@
 FROM node:10
 
-RUN apt-get update && apt-get install -y --no-install-recommends build-essential libproj-dev
+RUN apt-get update && apt-get install -y --no-install-recommends build-essential libproj-dev python3-pip python3-setuptools
+RUN pip3 install --upgrade pip
+RUN pip3 install awscli --upgrade --user
+ENV PATH "$PATH:/root/.local/bin"
 
 ENV SRC_DIR /opt/src/
 RUN mkdir -p $SRC_DIR

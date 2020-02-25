@@ -1,2 +1,2 @@
-# docker-node-gdal-2.x
-Node with GDAL 2.x
+# Docker image for hub-indexer
+Image used by the Hub-Indexer's DockerFile.
